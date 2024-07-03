@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- TREE OR LIST VIEW -->
+    <record id="owl_todo_list_tree_view" model="ir.ui.view">
+        <field name="name">owl.todo.list.tree.view</field>
+        <field name="model">owl.todo.list</field>
+        <field name="arch" type="xml">
+            <tree string="Todo List">
+                <field name="name" />
+                <field name="completed" />
+                <field name="color" widget="color" />
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- FORM VIEW -->
+    <record id="owl_todo_list_form_view" model="ir.ui.view">
+        <field name="name">owl.todo.list.form.view</field>
+        <field name="model">owl.todo.list</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="completed" />
+                        <field name="color" widget="color" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- SEARCH DATA IN STUDENT MODEL -->
+    <record id="owl_todo_list_search_view" model="ir.ui.view">
+        <field name="name">owl.todo.list.search.view</field>
+        <field name="model">owl.todo.list</field>
+        <field name="arch" type="xml">
+            <search string="Search in Todo List">
+                <field name="name" string="Task Name" />
+                <field name="completed" string="Completed" />
+                <field name="color" string="Color" />
+            </search>
+        </field>
+    </record>
+
+
+    <!-- ACTION FOR STUDENT MODEL -->
+    <record id="owl_todo_list_action" model="ir.actions.act_window">
+        <field name="name">Todo List</field>
+        <field name="res_model">owl.todo.list</field>
+        <field name="view_mode">tree,form,search</field>
+    </record>
+
+
+    <!-- OWL ACTION -->
+    <record id="action_owl_todo_list_js" model="ir.actions.client">
+        <field name="name">Todo List OWL</field>
+        <field name="tag">owl.action_todo_list_js</field>
+    </record>
+
+
+</odoo>

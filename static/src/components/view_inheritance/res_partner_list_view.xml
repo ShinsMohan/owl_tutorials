@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+    <t t-name="owl.ResPartnerListView.Buttons" t-inherit="web.ListView.Buttons" owl="1">
+        <xpath expr="//t[contains(@t-if, 'editedRecord')]" position="after">
+            <button class="btn btn-secondary" t-on-click="openSalesView">View Sales Orders</button>
+            <button class="btn btn-secondary" t-on-click="openInvoicesView">View Invoices</button>
+            
+        </xpath>
+    </t>
+</templates>
