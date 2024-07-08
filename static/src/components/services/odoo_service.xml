@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+    <t t-name="owl.OdooServices" owl="1">
+        <Layout display="display">
+            <div class="row">
+                <div class="col m-3">
+                    <button class="btn btn-primary" t-on-click="showNotification">Notification Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="showDialog">Dialog Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="showEffect">Effect Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="setCookieService">Cookie Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="getHttpService">Get Http Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="">Post Http Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="">RPC Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="">ORM Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="">Action Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="">Router Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="">User Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="">Company Service</button>
+                    <button class="btn btn-primary ms-2" t-on-click="">Title Service</button>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <table class="table mx-4" t-if="state.get_http_data">
+                            <tr>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                            </tr>                        
+                            <tr t-foreach="state.get_http_data" t-as="data" t-key="data.id">   
+                                <td><span t-esc="data.title" /></td>
+                                <td><span t-esc="data.description" /></td>
+                                <td><span t-esc="data.category" /></td>
+                                <td><span t-esc="data.price" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+    
+            </div>
+        </Layout>
+    </t>
+</templates>

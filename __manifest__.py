@@ -9,6 +9,7 @@
         'views/menu.xml',
         'views/res_partner.xml',
         'views/owl.xml',
+        'views/odoo_services.xml',
     ],
 
 
@@ -18,9 +19,9 @@
     'assets': {
 
         'web.assets_backend': [
-            'owl_tutorials/static/src/components/*/*.js',
-            'owl_tutorials/static/src/components/*/*.xml',
-            'owl_tutorials/static/src/components/*/*.scss',
+            'owl_tutorials/static/src/components/services/*.js',
+            'owl_tutorials/static/src/components/services/*.xml',
+            # 'owl_tutorials/static/src/components/*/*.scss',
         ]
     }
 }
