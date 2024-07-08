@@ -26,7 +26,21 @@
 
             </field>
         </record>
+
+        <record id="res_partner_form_view_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.view.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <attribute name="js_class">res_partner_form_view</attribute>
+                </xpath>
+                <field name="website" position="before">
+                    <!-- <field name="username" widget="username"/> -->
+                    <!-- <field name="expected_salary" widget="range"/> -->
+                </field>
+            </field>
+        </record>
     
     </data>
-    
 </odoo>

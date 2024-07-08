@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="owl.ResPartnerFormView" t-inherit="web.FormView" owl="1">
+        <!-- using positional index to locate the correct one -->
+        <!-- <xpath expr="//t[contains(@t-set-slot, 'control-panel-create-button')][1]" position="after">
+            <button class="btn btn-primary">Website</button>    
+        </xpath> -->
+        <!-- <xpath expr="//t[contains(@t-if, 'canCreate')][2]" position="after">
+            <button class="btn btn-primary">Website</button>    
+        </xpath> -->
+        <!-- <xpath expr="//button[hasclass('o_form_button_create')][1]" position="after">
+            <button class="btn btn-primary">Website</button>
+        </xpath> -->
+    </t>
+</templates>

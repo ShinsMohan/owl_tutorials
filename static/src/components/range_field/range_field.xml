@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+
+    <t t-name="owl.RangeField" owl="1">
+        <div>
+            <label for="customRange1" class="form-label">0</label>
+            <input type="range" class="form-range" id="customRange1" />
+        </div>
+    </t>
+    
+</template>
